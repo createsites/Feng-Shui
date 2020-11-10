@@ -1,0 +1,25 @@
+{
+  "name": "feng-shui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.26.13"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Romanenko-Vasilii/Feng-Shui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Romanenko-Vasilii/Feng-Shui/issues"
+  },
+  "homepage": "https://github.com/Romanenko-Vasilii/Feng-Shui#readme"
+}
