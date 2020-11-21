@@ -303,3 +303,24 @@ template {
  */
 [hidden] {
   display: none; }
+
+h1 {
+  color: #fff;
+  display: block;
+  text-align: center;
+  font-size: 72px;
+  text-transform: uppercase; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html {
+  font-size: 14px; }
+
+body {
+  font-family: sans-serif;
+  font-size: 1rem;
+  background-color: #000000; }
+
+img {
+  max-width: 100%; }
