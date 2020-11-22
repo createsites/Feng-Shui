@@ -306,10 +306,25 @@ template {
 
 h1 {
   color: #fff;
-  display: block;
   text-align: center;
   font-size: 72px;
   text-transform: uppercase; }
+
+.header__text {
+  color: #ffffff;
+  text-align: center;
+  font-size: 42px;
+  text-transform: uppercase; }
+
+.header__logo {
+  max-width: 48.57rem;
+  margin: 0 auto;
+  padding-top: 3rem; }
+
+.header__head {
+  display: flex;
+  text-transform: uppercase;
+  justify-content: space-between; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -320,7 +335,12 @@ html {
 body {
   font-family: sans-serif;
   font-size: 1rem;
-  background-color: #000000; }
+  background-color: #020501; }
 
 img {
   max-width: 100%; }
+
+.container {
+  width: 85%;
+  max-width: 1350px;
+  margin: auto; }
