@@ -1,24 +1,56 @@
 .rolls
+  padding-bottom: 3rem
   &__title
     color: $light
     font-size: 2.5rem
     text-transform: uppercase
     text-align: center
+.wrap
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
 .product
   width: 400px
   height: auto
-  background-color: #fff
+  background-color: #020501
   border: 3px solid $red
-  padding: 0.8rem
+  padding: 1.5rem
+  border-radius: 20px
+  margin-right: 10px
+  margin-bottom: 20px
+  
 .item
   &__img
+    margin-top: 20px
     max-width: 100%
     min-height: 80%
   &__title
     text-align: center
+    color: $light
+    font-size: 25px
+    font-weight: 700
+    margin: 10px 0 20px 0
+  &__structure
+    color: $light
+  &__price
+    color: $light
+    font-weight: 700
+    font-size: 30px
   &__wrap
     display: flex
     justify-content: space-between
+    align-items: center
+.button
+  &--primary
+    background-color: $red
+    border: 3px solid $red
+    text-transform: uppercase
+    font-weight: 700
+    font-size: 20px
+    color: $light
+    padding: 10px
+    border-radius: 10px
+
 
 
 
