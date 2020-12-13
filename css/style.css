@@ -304,6 +304,20 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: 'MyriadPro-Black';
+  src: url("../fonts/Myriad/MyriadPro-Black.woff") format("woff"), url("../fonts/Myriad/MyriadPro-Black.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap; }
+
+@font-face {
+  font-family: 'Stylo';
+  src: url("../fonts/Stylo/STYLO.woff") format("woff"), url("../fonts/Stylo/STYLO.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap; }
+
 h1 {
   color: #fff;
   text-align: center;
@@ -315,7 +329,8 @@ h1 {
   text-align: center;
   margin-left: 20px;
   font-size: 28px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: 'Stylo'; }
 
 .header__logo {
   max-width: 40.57rem;
@@ -369,7 +384,7 @@ html {
   font-size: 14px; }
 
 body {
-  font-family: sans-serif;
+  font-family: 'MyriadPro-Black', sans-serif;
   font-size: 1rem;
   background-color: #FAFAFA; }
 
@@ -390,7 +405,8 @@ a {
     color: #E14120FF;
     font-size: 2.5rem;
     text-transform: uppercase;
-    text-align: center; }
+    text-align: center;
+    font-family: 'Stylo'; }
 
 .wrap {
   display: flex;
