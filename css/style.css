@@ -328,7 +328,7 @@ h1 {
   color: #020501;
   text-align: center;
   margin-left: 20px;
-  font-size: 28px;
+  font-size: 2.5rem;
   text-transform: uppercase;
   font-family: 'Stylo'; }
 
@@ -358,10 +358,11 @@ h1 {
     margin-right: 3rem; }
 
 .info__item {
-  color: #E14120FF;
-  font-size: 1.5rem;
+  color: #020501;
+  font-size: 2.0rem;
   margin-right: 3.5rem;
-  font-weight: 700; }
+  font-weight: 700;
+  font-family: 'Stylo'; }
 
 .fa {
   margin-right: 2rem;
@@ -372,10 +373,11 @@ h1 {
   margin-left: -6rem; }
 
 .contacts__phone {
-  color: #E14120FF;
+  color: #020501;
   text-transform: uppercase;
-  font-size: 1.5rem;
-  font-weight: 700; }
+  font-size: 2.0rem;
+  font-weight: 700;
+  font-family: 'Stylo'; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
