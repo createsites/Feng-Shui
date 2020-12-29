@@ -318,11 +318,27 @@ template {
   font-style: normal;
   font-display: wrap; }
 
+.delivery__title {
+  color: #020501;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Stylo'; }
+
 h1 {
   color: #fff;
   text-align: center;
   font-size: 72px;
   text-transform: uppercase; }
+
+.pict {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.header__pago {
+  width: 30%;
+  padding-top: 6rem; }
 
 .header__text {
   color: #020501;
@@ -333,9 +349,9 @@ h1 {
   font-family: 'Stylo'; }
 
 .header__logo {
-  max-width: 40.57rem;
-  margin: 0 auto;
-  padding-top: 3rem; }
+  width: 40%;
+  padding-top: 3rem;
+  z-index: 99; }
 
 .header__head {
   display: flex;
@@ -396,7 +412,7 @@ html {
 body {
   font-family: 'MyriadPro-Black', sans-serif;
   font-size: 1rem;
-  background-color: #FFFBD7FF; }
+  background-color: #FFF; }
 
 img {
   max-width: 100%; }
