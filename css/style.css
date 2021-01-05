@@ -467,10 +467,12 @@ a {
 
 .product__structure {
   font-family: 'MyriadPro-Black';
-  font-size: 1.1rem; }
+  font-size: 1.1rem;
+  padding-left: 0.5rem; }
 
 .product__wish {
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  padding-left: 0.5rem; }
 
 .small {
   text-align: center;
