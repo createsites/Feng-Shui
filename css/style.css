@@ -356,7 +356,7 @@ h1 {
 .header__head {
   display: flex;
   text-transform: uppercase;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 2rem 0 2rem 0; }
 
@@ -385,7 +385,7 @@ h1 {
 .fa {
   margin-right: 2rem;
   color: #020501;
-  margin-top: 0; }
+  margin-top: -2px; }
   .fa:hover {
     color: #E14120FF;
     transition-property: all;
@@ -545,3 +545,18 @@ a {
 
 .text__black {
   color: #020501; }
+
+@media screen and (max-width: 1260px) {
+  .social {
+    display: none; }
+  .header__head {
+    justify-content: center; }
+  .info__item {
+    font-size: 1.8rem;
+    margin-right: 1.5rem; } }
+
+@media screen and (max-width: 1010px) {
+  .header__logo {
+    width: 50%; }
+  .header__pago {
+    display: none; } }
