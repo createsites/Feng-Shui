@@ -385,13 +385,17 @@ h1 {
 .fa {
   margin-right: 2rem;
   color: #020501;
-  margin-top: -2px; }
+  margin-top: -2px;
+  cursor: pointer; }
   .fa:hover {
     color: #E14120FF;
     transition-property: all;
     transition-duration: 0.2s;
     transition-timing-function: ease;
     transition-delay: 0.1s; }
+  .fa-bars {
+    margin-top: -6px;
+    margin-right: 1rem; }
 
 .head__social {
   margin-left: -6rem; }
@@ -402,6 +406,21 @@ h1 {
   font-size: 2.0rem;
   font-weight: 700;
   font-family: 'Stylo'; }
+
+.burger {
+  display: none;
+  color: #020501;
+  font-size: 2.0rem;
+  font-weight: 700;
+  font-family: 'Stylo';
+  margin: 2rem; }
+  .burger:hover {
+    cursor: pointer;
+    color: #E14120FF;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -560,3 +579,20 @@ a {
     width: 50%; }
   .header__pago {
     display: none; } }
+
+@media screen and (max-width: 865px) {
+  .header__head {
+    display: block;
+    margin-left: 5rem;
+    padding: 0; }
+  h1 {
+    margin: 0; }
+  .burger {
+    display: inline-block;
+    margin: 0; }
+  .info {
+    width: 250px;
+    display: none; }
+  .info__item {
+    padding-bottom: 1.5rem;
+    display: inline-block; } }
