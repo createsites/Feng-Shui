@@ -409,6 +409,7 @@ h1 {
 
 .burger {
   display: none;
+  width: 100%;
   color: #020501;
   font-size: 2.0rem;
   font-weight: 700;
@@ -575,8 +576,6 @@ a {
     margin-right: 1.5rem; } }
 
 @media screen and (max-width: 1010px) {
-  .header__logo {
-    width: 50%; }
   .header__pago {
     display: none; } }
 
@@ -590,9 +589,16 @@ a {
   .burger {
     display: inline-block;
     margin: 0; }
+    .burger__text {
+      margin: 1.5rem 0 0 0; }
   .info {
-    width: 250px;
-    display: none; }
+    width: 200px;
+    display: none;
+    position: absolute;
+    background: #ffffff;
+    border-radius: 5px; }
   .info__item {
-    padding-bottom: 1.5rem;
-    display: inline-block; } }
+    padding-top: 1.2rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-left: 0.5rem; } }

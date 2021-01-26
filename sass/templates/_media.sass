@@ -11,9 +11,7 @@
 
 @media screen and ( max-width: 1010px )
   .header
-    &__logo
-      width: 50%
-    &__pago
+   &__pago
       display: none
 @media screen and ( max-width: 865px )
   .header
@@ -21,17 +19,27 @@
       display: block
       margin-left: 5rem
       padding: 0
+      
   h1
     margin: 0    
   .burger
     display: inline-block
     margin: 0
+    &__text
+      margin: 1.5rem 0 0 0
+    
   .info
-    width: 250px
+    width: 200px
     display: none
+    position: absolute
+    background: $white
+    border-radius: 5px
   .info__item
-    padding-bottom: 1.5rem
+    padding-top: 1.2rem
     display: inline-block
+    font-size: 1.5rem
+    margin-left: 0.5rem
+    
       
   
       
