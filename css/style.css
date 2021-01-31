@@ -325,6 +325,20 @@ template {
   text-align: center;
   font-family: 'Stylo'; }
 
+.stocks__title {
+  color: #020501;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Stylo'; }
+
+.additional__title {
+  color: #020501;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Stylo'; }
+
 h1 {
   color: #fff;
   text-align: center;
@@ -358,7 +372,8 @@ h1 {
   text-transform: uppercase;
   justify-content: space-around;
   align-items: center;
-  padding: 2rem 0 2rem 0; }
+  padding: 2rem 0 2rem 0;
+  background-color: #FFFBD7FF; }
 
 .header__menu {
   background-color: #E14120FF;
@@ -369,18 +384,23 @@ h1 {
   font-size: 1.5rem;
   color: #ffffff; }
 
-.info__item {
-  color: #020501;
-  font-size: 2.0rem;
-  margin-right: 3.5rem;
-  font-weight: 700;
-  font-family: 'Stylo'; }
-  .info__item:hover {
-    color: #E14120FF;
-    transition-property: all;
-    transition-duration: 0.2s;
-    transition-timing-function: ease;
-    transition-delay: 0.1s; }
+.info {
+  margin-top: 0.8rem;
+  margin-right: -4rem;
+  background-color: #FFFBD7FF; }
+  .info__item {
+    color: #020501;
+    font-size: 2.0rem;
+    margin-right: 3.5rem;
+    font-weight: 700;
+    font-family: 'Stylo';
+    background-color: #FFFBD7FF; }
+    .info__item:hover {
+      color: #E14120FF;
+      transition-property: all;
+      transition-duration: 0.2s;
+      transition-timing-function: ease;
+      transition-delay: 0.1s; }
 
 .fa {
   margin-right: 2rem;
@@ -398,7 +418,7 @@ h1 {
     margin-right: 1rem; }
 
 .head__social {
-  margin-left: -6rem; }
+  margin-left: -14rem; }
 
 .contacts__phone {
   color: #020501;
@@ -422,6 +442,15 @@ h1 {
     transition-duration: 0.2s;
     transition-timing-function: ease;
     transition-delay: 0.1s; }
+
+.post {
+  padding: 0 5rem; }
+
+.fixd {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -582,8 +611,7 @@ a {
 @media screen and (max-width: 865px) {
   .header__head {
     display: block;
-    margin-left: 5rem;
-    padding: 0; }
+    padding-left: 5rem; }
   h1 {
     margin: 0; }
   .burger {
@@ -595,7 +623,7 @@ a {
     width: 200px;
     display: none;
     position: absolute;
-    background: #ffffff;
+    background: #FFFBD7FF;
     border-radius: 5px; }
   .info__item {
     padding-top: 1.2rem;
