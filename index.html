@@ -9,8 +9,30 @@
   <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="js/main.js" defer></script>
+
+  <!-- это я временно, чтобы хоть как-то оформить -->
+  <style>
+    #basket {
+      position: fixed;
+      z-index: 1000;
+      top: 1em;
+      right: 1em;
+      background-color: #fff;
+      padding: 2em;
+      border: #bbb 1px solid;
+    }
+
+    #basket .products_list div {
+      margin: 2em 0;
+    }
+  </style>
+
 </head>
 <body>
+  <div id="basket">
+    Корзина:
+    <div class="products_list"></div>
+  </div>
   <header class="header">
     <div class="container">
       <div class="pict">
@@ -77,19 +99,21 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/fila_spes_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">250</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
                 <div class="small__price"> <span class="small__price--line">270</span> р.</div>
+                <a href="#" class="buy">Купить</a>
                 <!-- /.small__price -->
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">350</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
                 <div class="big__price"> <span class="big__price--line">340</span>  р.</div>
+                <a href="#" class="buy">Купить</a>
                 <!-- /.big__price -->
               </div>
               <!-- /.big -->
@@ -112,19 +136,21 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/fila_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">240</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
                 <div class="small__price"> <span class="small__price--line">240</span> р.</div>
+                <a href="#" class="buy">Купить</a>
                 <!-- /.small__price -->
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">350</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
                 <div class="big__price"> <span class="big__price--line">280</span>  р.</div>
+                <a href="#" class="buy">Купить</a>
                 <!-- /.big__price -->
               </div>
               <!-- /.big -->
@@ -147,19 +173,21 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/fila_del_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">250</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
                 <div class="small__price"> <span class="small__price--line">290</span> р.</div>
+                <a href="#" class="buy">Купить</a>
                 <!-- /.small__price -->
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">360</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
                 <div class="big__price"> <span class="big__price--line">350</span>  р.</div>
+                <a href="#" class="buy">Купить</a>
                 <!-- /.big__price -->
               </div>
               <!-- /.big -->
