@@ -1,11 +1,13 @@
 .rolls
   padding-bottom: 3rem
+  // position: relative
   &__title
     color: $red
     font-size: 2.5rem
     text-transform: uppercase
     text-align: center
     font-family: 'Stylo'
+    margin-top: 1rem
 .wrap
   display: flex
   flex-wrap: wrap
@@ -16,8 +18,15 @@
     background-color: $beige 
     margin-right: 10px
     margin-bottom: 20px
-    
 
+.basket
+  width: 100px
+  background-color: $red  
+  z-index: 1000
+  // position: absolute
+  // right: 0
+  // top: 0
+  float: right
 .product
   &__title
     width: 100%

@@ -481,7 +481,8 @@ a {
     font-size: 2.5rem;
     text-transform: uppercase;
     text-align: center;
-    font-family: 'Stylo'; }
+    font-family: 'Stylo';
+    margin-top: 1rem; }
 
 .wrap {
   display: flex;
@@ -493,6 +494,12 @@ a {
     background-color: #FFFBD7FF;
     margin-right: 10px;
     margin-bottom: 20px; }
+
+.basket {
+  width: 100px;
+  background-color: #E14120FF;
+  z-index: 1000;
+  float: right; }
 
 .product__title {
   width: 100%;
