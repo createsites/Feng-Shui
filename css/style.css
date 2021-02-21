@@ -452,6 +452,13 @@ h1 {
   z-index: 999;
   width: 100%; }
 
+.fixd__basket {
+  position: fixed;
+  top: 114px;
+  right: 0;
+  z-index: 999;
+  width: 40px; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -474,6 +481,28 @@ img {
 a {
   text-decoration: none; }
 
+.buy {
+  width: 121px;
+  height: 30px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #E14120FF;
+  border: none;
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-top: 10px; }
+  .buy:hover {
+    color: #E14120FF;
+    background-color: #FFE968FF;
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s; }
+
+button {
+  outline: none; }
+
 .rolls {
   padding-bottom: 3rem; }
   .rolls__title {
@@ -490,7 +519,7 @@ a {
   justify-content: space-around; }
   .wrap__product {
     width: 300px;
-    height: 470px;
+    height: 510px;
     background-color: #FFFBD7FF;
     margin-right: 10px;
     margin-bottom: 20px; }
@@ -499,7 +528,9 @@ a {
   width: 100px;
   background-color: #E14120FF;
   z-index: 1000;
-  float: right; }
+  float: right;
+  margin-right: 1rem;
+  margin-top: -1rem; }
 
 .product__title {
   width: 100%;
@@ -587,7 +618,7 @@ a {
     text-transform: uppercase; }
   .big__price {
     color: #9CAD00FF;
-    margin: 0 auto;
+    margin: 0rem 0 0.7rem 0;
     color: #E14120FF;
     background-color: #FFE968FF;
     padding: 0.3rem 0; }

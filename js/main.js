@@ -19,10 +19,19 @@ $(document).ready(function(){
   
   var fixd = $('.header__head');
   $(window).scroll(function () {
-		if ($(this).scrollTop() > 410) {
+		if ($(this).scrollTop() > 400) {
 			fixd.addClass('fixd');
 		} else {
 			fixd.removeClass('fixd');
+		}
+	});
+
+  var fixd__basket = $('.basket');
+  $(window).scroll(function () {
+		if ($(this).scrollTop() > 400) {
+			fixd__basket.addClass('fixd__basket');
+		} else {
+			fixd__basket.removeClass('fixd__basket');
 		}
 	});
 
@@ -51,9 +60,9 @@ $(document).ready(function(){
       name = $(size).parents('.wrap__product').find('.product__title').text();
 
       // тупо добавляем html код с товаром в блок корзины
-      var strForAdding = '<div>' + name + '<br>Цена: ' + price + '<br>Вес: ' + weight + '<br>Размер: ' + sizeKind + '</div>';
-      $('#basket .products_list').append(strForAdding);
-      return false;
+      // var strForAdding = '<div>' + name + '<br>Цена: ' + price + '<br>Вес: ' + weight + '<br>Размер: ' + sizeKind + '</div>';
+      // $('#basket .products_list').append(strForAdding);
+      // return false;
   });
   
 });
