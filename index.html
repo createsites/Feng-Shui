@@ -70,7 +70,7 @@
         <!-- /.basket__title -->
         <div class="total__price"> 0 <span class="rub">&#8399;</span></div>
         <!-- /.total__price -->
-        <button class="order"> оформить  заказ</button>
+        <button class="order" data-toggle="modal"> оформить  заказ</button>
         
       </div>
         <!-- /.basket -->
@@ -1444,5 +1444,42 @@
     <!-- /.delivery -->
     
   </main>
+  <div class="modal">
+    <div class="modal__window">
+      <div class="modal__title">ваш заказ</div>
+      <!-- /.modal__title -->
+      <button class="modal__close"></button> 
+      <!-- /.modal__close -->
+      <div class="modal__product">
+        <div class="modal__product__img">
+          <img class="product__img" src="img/rolls/tai_H.jpg" alt="#">
+        </div>
+        <!-- /.modal__product__img -->
+        <div class="modal__product__title">
+          Филадельфия <br> Classic
+          <p class="modal__product__text">Рис, твороженный сыр, креветка, лук, нори, лосось, огурец.</p>
+        </div>
+        <!-- /.modal__product__title -->
+        <div class="modal__buttom">
+          <button class="add add__plus">+</button>
+          <button class="add add__minus">&#8211</button>
+        </div>
+        <!-- /.modal__buttom -->
+        <div class="quantity"> Количество <br> <span class="lot">1</span> </div>
+        <!-- /.quantity -->
+        <div class="modal__price"> Стоимость <span class="cost">250 р.</span></div>
+        <!-- /.modal__price -->
+      </div>
+      <!-- /.modal__product -->
+      <div class="modal__total__price"> Итого: 0 р</div>
+      <!-- /.modal__total__price -->
+
+
+    </div>
+    <!-- /.modal__window -->
+     
+
+  </div>
+  <!-- /.modal -->
 </body>
 </html>

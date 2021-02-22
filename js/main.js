@@ -10,6 +10,25 @@ $(document).ready(function(){
   //   $('.info').css('display', 'none');
   // });
 
+  var modal = $('.modal'),
+      modalBtn = $('[data-toggle=modal]'),
+      closeBtn = $('.modal__close')
+
+  modalBtn.on('click', function () {
+    modal.toggleClass('modal--visible');
+  });
+  closeBtn.on('click', function () {
+    modal.toggleClass('modal--visible');
+  });
+
+  function press(event) {
+    if(event.keyCode == '27') {
+      modal.removeClass('modal--visible');
+    }
+  }
+  
+  window.addEventListener('keydown', press, false);
+
   $('a[href^="#"]').click(function(){ 
     if(document.getElementById($(this).attr('href').substr(1)) != null) { 
       $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 150 }, 700); 

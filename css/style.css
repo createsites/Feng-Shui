@@ -449,15 +449,14 @@ h1 {
 .fixd {
   position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 100;
   width: 100%; }
 
 .fixd__basket {
   position: fixed;
   top: 114px;
   right: 0;
-  z-index: 999;
-  width: 40px; }
+  z-index: 0; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -527,7 +526,7 @@ button {
 .basket {
   width: 200px;
   background-color: #E14120FF;
-  z-index: 1000;
+  z-index: 10;
   float: right;
   margin-right: 1rem;
   margin-top: -1rem;
@@ -670,6 +669,98 @@ button {
 
 .text__black {
   color: #020501; }
+
+.modal {
+  opacity: 0;
+  visibility: visible;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(2, 5, 1, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible;
+    z-index: 400; }
+  .modal__window {
+    position: relative;
+    width: 100rem;
+    height: 100vh;
+    background: rgba(2, 5, 1, 0.8);
+    padding: 2.357rem 3.5rem 1.928rem;
+    color: #ffffff; }
+  .modal__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    background: url("../img/close.svg") no-repeat center;
+    border: none;
+    margin: 12px;
+    cursor: pointer; }
+  .modal__title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem; }
+  .modal__price {
+    font-size: 2rem;
+    margin-left: 2rem; }
+  .modal__total__price {
+    font-size: 2rem;
+    float: right;
+    margin: 1rem 2rem 0 0; }
+  .modal .modal__product {
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    margin-top: 2rem; }
+    .modal .modal__product__title {
+      width: 20%;
+      color: #ffffff;
+      font-size: 2rem;
+      padding: 0.5rem 0;
+      font-weight: 700;
+      margin-left: 2rem;
+      margin-right: 2rem; }
+    .modal .modal__product__text {
+      display: block;
+      font-size: 1.5rem; }
+    .modal .modal__product__buttom {
+      width: 8rem;
+      line-height: 0.5; }
+
+.add {
+  display: inline;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 2rem;
+  background-color: #ffffff;
+  border: 3px solid #ffffff;
+  margin: 50px 5px 0 5px; }
+
+.quantity {
+  font-size: 2rem;
+  margin: 0 1rem; }
+
+.lot {
+  display: block;
+  text-align: center;
+  margin: 1.6rem 0 0 0; }
+
+.cost {
+  display: block;
+  margin: 1.6rem 0 0 0;
+  text-align: center; }
 
 @media screen and (max-width: 1260px) {
   .social {
