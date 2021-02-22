@@ -20,13 +20,49 @@
     margin-bottom: 20px
 
 .basket
-  width: 100px
+  width: 200px
   background-color: $red  
   z-index: 1000
   float: right
   margin-right: 1rem
   margin-top: -1rem
+  border-radius: 5px
+  padding-bottom: 0.5rem
+  &__title
+    text-transform: uppercase
+    color: $white
+    font-size: 1.5rem
+    font-family: 'MyriadPro-Black'
+    text-align: center
+    padding: 10px 10px 5px 10px
+.order
+  text-transform: uppercase
+  color: $white
+  font-size: 1.2rem
+  background-color: $red
+  border: 3px solid $white
+  border-radius: 5px
+  padding: 0.7rem
+  cursor: pointer
+  display: flex
+  &:hover
+    color: $red
+    background-color: $white
+    transition-property: all
+    transition-duration: 0.1s
+    transition-timing-function: ease
+    transition-delay: 0.1s
   
+  margin: 0 auto
+.rub
+  font-family: 'PT Sans', serif
+  font-size: 2rem
+  color: $white
+.total__price
+  color: $white
+  font-size: 3rem
+  text-align: center
+
 .product
   &__title
     width: 100%

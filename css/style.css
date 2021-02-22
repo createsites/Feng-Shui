@@ -525,12 +525,50 @@ button {
     margin-bottom: 20px; }
 
 .basket {
-  width: 100px;
+  width: 200px;
   background-color: #E14120FF;
   z-index: 1000;
   float: right;
   margin-right: 1rem;
-  margin-top: -1rem; }
+  margin-top: -1rem;
+  border-radius: 5px;
+  padding-bottom: 0.5rem; }
+  .basket__title {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-family: 'MyriadPro-Black';
+    text-align: center;
+    padding: 10px 10px 5px 10px; }
+
+.order {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 1.2rem;
+  background-color: #E14120FF;
+  border: 3px solid #ffffff;
+  border-radius: 5px;
+  padding: 0.7rem;
+  cursor: pointer;
+  display: flex;
+  margin: 0 auto; }
+  .order:hover {
+    color: #E14120FF;
+    background-color: #ffffff;
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s; }
+
+.rub {
+  font-family: 'PT Sans', serif;
+  font-size: 2rem;
+  color: #ffffff; }
+
+.total__price {
+  color: #ffffff;
+  font-size: 3rem;
+  text-align: center; }
 
 .product__title {
   width: 100%;
