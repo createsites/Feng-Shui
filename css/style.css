@@ -452,11 +452,11 @@ h1 {
   z-index: 100;
   width: 100%; }
 
-.fixd__basket {
+.basket.fixd__basket {
   position: fixed;
-  top: 114px;
+  top: 96px;
   right: 0;
-  z-index: 0; }
+  z-index: 1; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -476,6 +476,8 @@ img {
   width: 85%;
   max-width: 1350px;
   margin: auto; }
+  .container__rolls {
+    width: 70%; }
 
 a {
   text-decoration: none; }
@@ -503,7 +505,8 @@ button {
   outline: none; }
 
 .rolls {
-  padding-bottom: 3rem; }
+  padding-bottom: 3rem;
+  position: relative; }
   .rolls__title {
     color: #E14120FF;
     font-size: 2.5rem;
@@ -526,10 +529,10 @@ button {
 .basket {
   width: 200px;
   background-color: #E14120FF;
-  z-index: 10;
-  float: right;
-  margin-right: 1rem;
-  margin-top: -1rem;
+  z-index: 1;
+  position: absolute;
+  top: -1rem;
+  right: 0;
   border-radius: 5px;
   padding-bottom: 0.5rem; }
   .basket__title {
@@ -550,7 +553,8 @@ button {
   padding: 0.7rem;
   cursor: pointer;
   display: flex;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 90%; }
   .order:hover {
     color: #E14120FF;
     background-color: #ffffff;
@@ -769,7 +773,10 @@ button {
     justify-content: center; }
   .info__item {
     font-size: 1.8rem;
-    margin-right: 1.5rem; } }
+    margin-right: 1.5rem; }
+  .basket {
+    width: 150px;
+    margin-right: 0; } }
 
 @media screen and (max-width: 1010px) {
   .header__pago {
