@@ -325,6 +325,9 @@ template {
   text-align: center;
   font-family: 'Stylo'; }
 
+.delivery__post {
+  font-size: 2rem; }
+
 .stocks__title {
   color: #020501;
   font-size: 2.5rem;
@@ -332,12 +335,25 @@ template {
   text-align: center;
   font-family: 'Stylo'; }
 
+.stocks__post {
+  font-size: 2rem; }
+
 .additional__title {
   color: #020501;
   font-size: 2.5rem;
   text-transform: uppercase;
   text-align: center;
   font-family: 'Stylo'; }
+
+.product__weight--special {
+  margin: 1rem 0 0 0; }
+
+.size_kind--special {
+  text-align: center;
+  width: 100% !important; }
+
+.wrap__product--special {
+  height: 460px !important; }
 
 h1 {
   color: #fff;
@@ -444,7 +460,8 @@ h1 {
     transition-delay: 0.1s; }
 
 .post {
-  padding: 0 5rem; }
+  padding: 0 5rem;
+  font-size: 2rem; }
 
 .fixd {
   position: fixed;
@@ -477,6 +494,8 @@ img {
   max-width: 1350px;
   margin: auto; }
   .container__rolls {
+    width: 70%; }
+  .container__additional {
     width: 70%; }
 
 a {
