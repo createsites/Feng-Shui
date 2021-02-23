@@ -699,7 +699,7 @@ button {
     width: 95%;
     height: 100vh;
     background: rgba(2, 5, 1, 0.8);
-    padding: 2.357rem 3.5rem 1.928rem;
+    padding: 2.357rem 0.5rem 1.928rem;
     color: #ffffff; }
   .modal__close {
     position: absolute;
@@ -726,8 +726,9 @@ button {
     justify-content: space-between;
     height: auto;
     margin-top: 2rem; }
+    .modal .modal__product__img {
+      margin-right: 1rem; }
     .modal .modal__product__title {
-      width: 20%;
       color: #ffffff;
       font-size: 2rem;
       font-weight: 700; }
@@ -736,7 +737,8 @@ button {
       font-size: 1.5rem; }
   .modal__buttom {
     width: 110px;
-    display: flex; }
+    display: flex;
+    justify-content: center; }
 
 .add {
   display: inline;
@@ -826,4 +828,28 @@ button {
     font-size: 1.1rem;
     padding: 0.4rem; }
   .basket.fixd__basket {
-    top: 110px; } }
+    top: 110px; }
+  .modal__product__img {
+    display: none; }
+  .add {
+    margin: 0;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    line-height: 0.5; }
+    .add__plus {
+      margin-right: 0.5rem; }
+  .modal__buttom {
+    width: 80px; }
+  .modal__window {
+    padding: 2.357rem 0.5rem 1.928rem; }
+  .modal__price {
+    font-size: 1.2rem; }
+  .modal .modal__product__title {
+    font-size: 1.2rem;
+    margin: 0 0.5rem; }
+  .quantity {
+    font-size: 1.2rem;
+    margin: 0 0.5rem; }
+  .modal .modal__product__text {
+    display: none; } }
