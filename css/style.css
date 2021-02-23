@@ -454,7 +454,7 @@ h1 {
 
 .basket.fixd__basket {
   position: fixed;
-  top: 96px;
+  top: 99px;
   right: 0;
   z-index: 1; }
 
@@ -533,6 +533,7 @@ button {
   position: absolute;
   top: -1rem;
   right: 0;
+  text-align: center;
   border-radius: 5px;
   padding-bottom: 0.5rem; }
   .basket__title {
@@ -552,7 +553,7 @@ button {
   border-radius: 5px;
   padding: 0.7rem;
   cursor: pointer;
-  display: flex;
+  text-align: center;
   margin: 0 auto;
   width: 90%; }
   .order:hover {
@@ -695,7 +696,7 @@ button {
     z-index: 400; }
   .modal__window {
     position: relative;
-    width: 100rem;
+    width: 95%;
     height: 100vh;
     background: rgba(2, 5, 1, 0.8);
     padding: 2.357rem 3.5rem 1.928rem;
@@ -715,31 +716,27 @@ button {
     text-align: center;
     font-size: 2.5rem; }
   .modal__price {
-    font-size: 2rem;
-    margin-left: 2rem; }
+    font-size: 2rem; }
   .modal__total__price {
     font-size: 2rem;
     float: right;
     margin: 1rem 2rem 0 0; }
   .modal .modal__product {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     height: auto;
     margin-top: 2rem; }
     .modal .modal__product__title {
       width: 20%;
       color: #ffffff;
       font-size: 2rem;
-      padding: 0.5rem 0;
-      font-weight: 700;
-      margin-left: 2rem;
-      margin-right: 2rem; }
+      font-weight: 700; }
     .modal .modal__product__text {
       display: block;
       font-size: 1.5rem; }
-    .modal .modal__product__buttom {
-      width: 8rem;
-      line-height: 0.5; }
+  .modal__buttom {
+    width: 110px;
+    display: flex; }
 
 .add {
   display: inline;
@@ -778,6 +775,17 @@ button {
     width: 150px;
     margin-right: 0; } }
 
+@media screen and (max-width: 1150px) {
+  .modal__price {
+    font-size: 1.5rem; }
+  .modal .modal__product__title {
+    font-size: 1.5rem;
+    margin: 0 0.5rem; }
+  .modal .modal__product__text {
+    font-size: 1rem; }
+  .quantity {
+    font-size: 1.5rem; } }
+
 @media screen and (max-width: 1010px) {
   .header__pago {
     display: none; } }
@@ -804,3 +812,18 @@ button {
     display: inline-block;
     font-size: 1.5rem;
     margin-left: 0.5rem; } }
+
+@media screen and (max-width: 610px) {
+  .wrap {
+    justify-content: flex-start; }
+  .container__rolls {
+    margin-left: 10px; }
+  .basket {
+    width: 100px; }
+    .basket__title {
+      font-size: 1.3rem; }
+  .order {
+    font-size: 1.1rem;
+    padding: 0.4rem; }
+  .basket.fixd__basket {
+    top: 110px; } }
