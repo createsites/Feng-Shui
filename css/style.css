@@ -325,6 +325,9 @@ template {
   text-align: center;
   font-family: 'Stylo'; }
 
+.delivery__post {
+  font-size: 2rem; }
+
 .stocks__title {
   color: #020501;
   font-size: 2.5rem;
@@ -332,12 +335,26 @@ template {
   text-align: center;
   font-family: 'Stylo'; }
 
+.stocks__post {
+  font-size: 2rem; }
+
 .additional__title {
   color: #020501;
   font-size: 2.5rem;
   text-transform: uppercase;
   text-align: center;
   font-family: 'Stylo'; }
+
+.product__weight--special {
+  margin: 1rem 0 0 0; }
+
+.size_kind--special {
+  text-align: center;
+  width: 100% !important;
+  margin-top: -1px; }
+
+.wrap__product--special {
+  height: 460px !important; }
 
 h1 {
   color: #fff;
@@ -444,7 +461,8 @@ h1 {
     transition-delay: 0.1s; }
 
 .post {
-  padding: 0 5rem; }
+  padding: 0 5rem;
+  font-size: 2rem; }
 
 .fixd {
   position: fixed;
@@ -452,11 +470,11 @@ h1 {
   z-index: 100;
   width: 100%; }
 
-.fixd__basket {
+.basket.fixd__basket {
   position: fixed;
-  top: 114px;
+  top: 99px;
   right: 0;
-  z-index: 0; }
+  z-index: 1; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -476,6 +494,10 @@ img {
   width: 85%;
   max-width: 1350px;
   margin: auto; }
+  .container__rolls {
+    width: 70%; }
+  .container__additional {
+    width: 70%; }
 
 a {
   text-decoration: none; }
@@ -503,7 +525,8 @@ button {
   outline: none; }
 
 .rolls {
-  padding-bottom: 3rem; }
+  padding-bottom: 3rem;
+  position: relative; }
   .rolls__title {
     color: #E14120FF;
     font-size: 2.5rem;
@@ -526,10 +549,11 @@ button {
 .basket {
   width: 200px;
   background-color: #E14120FF;
-  z-index: 10;
-  float: right;
-  margin-right: 1rem;
-  margin-top: -1rem;
+  z-index: 1;
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  text-align: center;
   border-radius: 5px;
   padding-bottom: 0.5rem; }
   .basket__title {
@@ -549,8 +573,9 @@ button {
   border-radius: 5px;
   padding: 0.7rem;
   cursor: pointer;
-  display: flex;
-  margin: 0 auto; }
+  text-align: center;
+  margin: 0 auto;
+  width: 90%; }
   .order:hover {
     color: #E14120FF;
     background-color: #ffffff;
@@ -691,10 +716,10 @@ button {
     z-index: 400; }
   .modal__window {
     position: relative;
-    width: 100rem;
+    width: 100%;
     height: 100vh;
     background: rgba(2, 5, 1, 0.8);
-    padding: 2.357rem 3.5rem 1.928rem;
+    padding: 2.357rem 0.5rem 1.928rem;
     color: #ffffff; }
   .modal__close {
     position: absolute;
@@ -704,38 +729,36 @@ button {
     height: 28px;
     background: url("../img/close.svg") no-repeat center;
     border: none;
-    margin: 12px;
+    margin: 34px 12px 12px 12px;
     cursor: pointer; }
   .modal__title {
     text-transform: uppercase;
     text-align: center;
     font-size: 2.5rem; }
   .modal__price {
-    font-size: 2rem;
-    margin-left: 2rem; }
+    font-size: 2rem; }
   .modal__total__price {
     font-size: 2rem;
     float: right;
     margin: 1rem 2rem 0 0; }
   .modal .modal__product {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     height: auto;
     margin-top: 2rem; }
+    .modal .modal__product__img {
+      margin-right: 1rem; }
     .modal .modal__product__title {
-      width: 20%;
       color: #ffffff;
       font-size: 2rem;
-      padding: 0.5rem 0;
-      font-weight: 700;
-      margin-left: 2rem;
-      margin-right: 2rem; }
+      font-weight: 700; }
     .modal .modal__product__text {
       display: block;
       font-size: 1.5rem; }
-    .modal .modal__product__buttom {
-      width: 8rem;
-      line-height: 0.5; }
+  .modal__buttom {
+    width: 110px;
+    display: flex;
+    justify-content: center; }
 
 .add {
   display: inline;
@@ -769,7 +792,21 @@ button {
     justify-content: center; }
   .info__item {
     font-size: 1.8rem;
-    margin-right: 1.5rem; } }
+    margin-right: 1.5rem; }
+  .basket {
+    width: 150px;
+    margin-right: 0; } }
+
+@media screen and (max-width: 1150px) {
+  .modal__price {
+    font-size: 1.5rem; }
+  .modal .modal__product__title {
+    font-size: 1.5rem;
+    margin: 0 0.5rem; }
+  .modal .modal__product__text {
+    font-size: 1rem; }
+  .quantity {
+    font-size: 1.5rem; } }
 
 @media screen and (max-width: 1010px) {
   .header__pago {
@@ -797,3 +834,61 @@ button {
     display: inline-block;
     font-size: 1.5rem;
     margin-left: 0.5rem; } }
+
+@media screen and (max-width: 610px) {
+  .wrap {
+    justify-content: flex-start; }
+  .container__rolls {
+    margin-left: 10px; }
+  .basket {
+    width: 100px; }
+    .basket__title {
+      font-size: 1.3rem; }
+  .order {
+    font-size: 1.1rem;
+    padding: 0.4rem; }
+  .basket.fixd__basket {
+    top: 110px; }
+  .modal__product__img {
+    display: none; }
+  .add {
+    margin: 0;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    line-height: 0.5; }
+    .add__plus {
+      margin-right: 0.5rem; }
+  .modal__buttom {
+    width: 80px; }
+  .modal__window {
+    padding: 5.357rem 0.5rem 1.928rem; }
+  .modal__price {
+    font-size: 1.2rem; }
+  .modal .modal__product__title {
+    font-size: 1.2rem;
+    margin: 0 0.5rem; }
+  .quantity {
+    font-size: 1.2rem;
+    margin: 0 0.5rem; }
+  .modal .modal__product__text {
+    display: none; } }
+
+@media screen and (max-width: 440px) {
+  .quantity {
+    font-size: 1rem;
+    margin: 0 0.3rem; }
+  .modal__price {
+    font-size: 1rem; }
+  .modal .modal__product__title {
+    font-size: 1rem;
+    margin: 0 0.5rem 0 0; }
+  .add {
+    margin: 0;
+    width: 1.7rem;
+    height: 1.7rem;
+    font-size: 1.3rem;
+    line-height: 0.5;
+    padding: 0; }
+    .add__plus {
+      margin-right: 0.3rem; } }
