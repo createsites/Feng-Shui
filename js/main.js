@@ -184,6 +184,11 @@ $(document).ready(function(){
     $('.buy').click(function () {
         // к родителю добавил .size_kind - это общий класс для small и big, чтобы проще было искать
         var size = $(this).parent('.size_kind');
+        // временная примитивная валидация, чтобы не ломалась корзина если нет sizeKind
+        if (size.length === 0) {
+            console.log('Ошибка: у товара отсутствует размер');
+            return false;
+        }
         // собираем инфу о товаре
         var product = {}; // объект с данными о товаре
 
