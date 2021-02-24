@@ -749,6 +749,7 @@ button {
     .modal .modal__product__img {
       margin-right: 1rem; }
     .modal .modal__product__title {
+      width: 25.5rem;
       color: #ffffff;
       font-size: 2rem;
       font-weight: 700; }
