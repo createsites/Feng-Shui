@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
   <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" />
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
   <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -67,7 +68,7 @@
         <div class="basket__title">Корзина
         </div>
         <!-- /.basket__title -->
-        <div class="total__price"> 0 <span class="rub">р</span></div>
+        <div class="total__price"> <span class="total__price_amount">0</span> <span class="rub">&#8399;</span></div>
         <!-- /.total__price -->
         <button class="order" data-toggle="modal"> заказать</button>
         
@@ -193,7 +194,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/fila_krev_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">210</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -202,7 +203,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">320</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -230,7 +231,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/geysha_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">205</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -239,7 +240,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">310</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -263,7 +264,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/Lava_hot_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">225</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -272,7 +273,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">330</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -296,7 +297,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/Lava_ice_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">215</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -305,7 +306,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">320</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -329,7 +330,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/fantasy_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">225</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -338,7 +339,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">335</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -362,7 +363,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/ovosh_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">195</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -371,7 +372,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">285</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -395,7 +396,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/dracon_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">220</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -404,7 +405,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">325</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -428,7 +429,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/tortilia_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">150</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -437,7 +438,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">200</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -461,7 +462,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/xonsy_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">200</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -470,7 +471,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">295</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -494,7 +495,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/Canada_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">225</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -503,7 +504,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">340</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -527,7 +528,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/fudzi_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">200</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -536,7 +537,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">315</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -560,7 +561,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/california_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">225</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -569,7 +570,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">315</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -593,7 +594,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/cali_chees_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">230</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -602,7 +603,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">325</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -626,7 +627,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/black_draco_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">190</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -635,7 +636,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">285</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -659,7 +660,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/sun_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">180</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -668,7 +669,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">275</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -692,7 +693,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/tomato_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">200</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -701,7 +702,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">290</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -725,7 +726,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/president_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">200</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -734,7 +735,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">320</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -758,7 +759,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/nevada_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">200</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -767,7 +768,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">285</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -791,7 +792,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/nebracka_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">200</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -800,7 +801,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">285</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -824,7 +825,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/mafia_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">210</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -833,7 +834,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">315</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -857,7 +858,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/Chica_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">180</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -866,7 +867,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">280</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -890,7 +891,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/nega_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">220</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -899,7 +900,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">320</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -923,7 +924,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/bonito_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">210</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -932,7 +933,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">295</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -956,7 +957,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/norvegia_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">200</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -965,7 +966,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">295</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -989,7 +990,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/merkyr_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">210</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -998,7 +999,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">315</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -1022,7 +1023,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/osaka_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">210</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -1031,7 +1032,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">305</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -1055,7 +1056,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/miloky_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">190</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -1064,7 +1065,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">285</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -1088,7 +1089,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/boston_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">190</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -1097,7 +1098,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">285</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -1121,7 +1122,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/foria_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">265</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -1130,7 +1131,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">385</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -1154,7 +1155,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/dolina_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">220</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -1163,7 +1164,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">315</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -1187,7 +1188,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/red_river_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">200</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -1196,7 +1197,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">300</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -1220,7 +1221,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/green_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">200</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -1229,7 +1230,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">290</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -1253,7 +1254,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/neapol_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">200</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -1262,7 +1263,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">290</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -1286,7 +1287,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/beer_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">200</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -1295,7 +1296,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">280</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -1319,7 +1320,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/sliva_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">200</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -1328,7 +1329,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">300</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -1352,7 +1353,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/cesar_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">190</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -1361,7 +1362,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">285</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -1385,7 +1386,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/tai_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">200</span> гр.</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -1394,7 +1395,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">300</span>  гр.</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -1466,7 +1467,7 @@
             <!-- /.product__title -->
             <img class="product__img" src="img/rolls/Lava_hot_H.jpg" alt="#">
             <div class="weight product__weight">
-              <div class="small">
+              <div class="small size_kind">
                 <div class="small__gramm"> <span class="small__gramm--line">30</span> мл</div>
               <!-- /.small__gramm -->
                 <div class="small__size">cтандартный</div>
@@ -1475,7 +1476,7 @@
                 <button class="buy">Купить</button>
               </div>
               <!-- /.small -->
-              <div class="big">
+              <div class="big size_kind">
                 <div class="big__gramm"> <span class="big__gramm--line">100</span>  мл</div>
               <!-- /.big__gramm -->
               <div class="big__size">большой</div>
@@ -1520,28 +1521,9 @@
       <!-- /.modal__title -->
       <button class="modal__close"></button> 
       <!-- /.modal__close -->
-      <div class="modal__product">
-        <div class="modal__product__img">
-          <img class="product__img" src="img/rolls/tai_H.jpg" alt="#">
-        </div>
-        <!-- /.modal__product__img -->
-        <div class="modal__product__title">
-          Филадельфия <br> Classic
-          <p class="modal__product__text">Рис, твороженный сыр, креветка, лук, нори, лосось, огурец.</p>
-        </div>
-        <!-- /.modal__product__title -->
-        <div class="modal__buttom">
-          <button class="add add__plus">+</button>
-          <button class="add add__minus">&#8211</button>
-        </div>
-        <!-- /.modal__buttom -->
-        <div class="quantity"> Количество <br> <span class="lot">1</span> </div>
-        <!-- /.quantity -->
-        <div class="modal__price"> Стоимость <span class="cost">250 р.</span></div>
-        <!-- /.modal__price -->
-      </div>
+      <div id="modal__product_list"></div>
       <!-- /.modal__product -->
-      <div class="modal__total__price"> Итого: 0 р</div>
+      <div class="modal__total__price"> Итого: <span id="modal__total__price_amount">0</span> р</div>
       <!-- /.modal__total__price -->
 
 
