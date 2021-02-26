@@ -476,6 +476,9 @@ h1 {
   right: 0;
   z-index: 1; }
 
+.head__info {
+  z-index: 10; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -541,7 +544,7 @@ button {
   justify-content: space-around; }
   .wrap__product {
     width: 300px;
-    height: 510px;
+    height: 525px;
     background-color: #FFFBD7FF;
     margin-right: 10px;
     margin-bottom: 20px; }
@@ -749,7 +752,7 @@ button {
     .modal .modal__product__img {
       margin-right: 1rem; }
     .modal .modal__product__title {
-      width: 25.5rem;
+      width: 25%;
       color: #ffffff;
       font-size: 2rem;
       font-weight: 700; }
