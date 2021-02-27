@@ -6,9 +6,25 @@ $(document).ready(function(){
       }
     });
   });
+  
+  // var x = document.getElementById("Modal");
+  // убрать прокрутку из под модального окна
+  
+  // function showModal() {
+  //   x.showModal();
+  //   document.body.style.overflow = 'hidden'; // Убираем прокрутку
+  // }
+
+  // function closeModal() {
+  //   x.close();
+  //   document.body.style.overflow = ''; // Восстанавливаем прокрутку
+  // }
+ 
   // $('.info__item').on('click', function() {
   //   $('.info').css('display', 'none');
   // });
+
+  
 
   var modal = $('.modal'),
       modalBtn = $('[data-toggle=modal]'),
@@ -264,5 +280,32 @@ $(document).ready(function(){
     basket.refreshPrice();
     // обновляем продукты в оформлении заказа
     basket.refreshOrder();
+  
+  // Валидация формы
+  $('form').validate({
+    errorClass: "invalid",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // compound rule
+      
+    },
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длиннее 15 букв"
+      },
+      userPhone: "Телефон обязателен",
+    }
+  });
 
+  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+
+  
 });
