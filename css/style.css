@@ -753,9 +753,9 @@ button {
     position: absolute;
     top: 0;
     right: 0;
-    width: 28px;
-    height: 28px;
-    background: url("../img/close.svg") no-repeat center;
+    width: 40px;
+    height: 40px;
+    background: url("../img/close_32.svg") no-repeat center;
     border: none;
     margin: 34px 12px 12px 12px;
     cursor: pointer; }
@@ -844,6 +844,14 @@ button {
 .invalid {
   color: tomato;
   padding-left: 1rem; }
+
+.product__close {
+  width: 28px;
+  height: 28px;
+  background: url("../img/close.svg") no-repeat center;
+  border: none;
+  margin: 0.5rem;
+  cursor: pointer; }
 
 @media screen and (max-width: 1260px) {
   .social {
@@ -937,9 +945,15 @@ button {
     display: none; } }
 
 @media screen and (max-width: 440px) {
+  .modal__total__price {
+    margin-bottom: 1.5rem; }
   .quantity {
     font-size: 1rem;
     margin: 0 0.3rem; }
+  .modal__button {
+    width: 90%; }
+  .modal__input {
+    width: 95%; }
   .modal__price {
     font-size: 1rem; }
   .modal .modal__product__title {
@@ -953,4 +967,8 @@ button {
     line-height: 0.5;
     padding: 0; }
     .add__plus {
-      margin-right: 0.3rem; } }
+      margin-right: 0.3rem; }
+  .input__group {
+    width: 95%; }
+  .input--light {
+    font-size: 1.5rem; } }
