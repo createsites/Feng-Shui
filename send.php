@@ -33,7 +33,7 @@ try {
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта';
-    $mail->Body    = "Имя заказчика: {$userName}, его телефон: {$userPhone}, комментарий: {$userComment}";
+    $mail->Body    = "Имя заказчика: {$userName}, его телефон: {$userPhone}, комментарий: {$userComment}, заказ {$_COOKIE}";
 
     $mail->send();
     // header('Location: sanks.html');

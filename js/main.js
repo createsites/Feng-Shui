@@ -139,7 +139,7 @@ $(document).ready(function(){
             '          <!-- /.quantity -->\n' +
             '          <div class="modal__price"> Стоимость <span class="cost">' + product.price + ' р.</span></div>\n' +
             '          <!-- /.modal__price -->\n' +
-            '        </div>\n' +
+            '          <div class="product__close"></div>\n' +
             '      </div>';
 
         $('#modal__product_list').append(productStr);

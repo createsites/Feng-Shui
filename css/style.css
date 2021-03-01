@@ -351,10 +351,14 @@ template {
 .size_kind--special {
   text-align: center;
   width: 100% !important;
+  margin-left: 0 !important;
   margin-top: -1px; }
 
 .wrap__product--special {
   height: 460px !important; }
+
+.size_kind {
+  margin-left: 0; }
 
 h1 {
   color: #fff;
