@@ -4,7 +4,15 @@ $userName = $_POST['userName'];
 $userPhone = $_POST['userPhone'];
 $userComment = $_POST['userComment'];
 
-var_dump('<pre>'.$_COOKIE.'</pre>', true);
+
+
+$basket = json_decode($_COOKIE['basket']);
+$productsStr = '';
+$totalCost = 0;
+foreach ($basket as $product) {
+  $productsStr .= "{$product->name} , {$product->sizeKind}, {$product->weight}, цена: {$product->price}, количество: {$product->quantity}, {$product->structure}\n";
+  $totalCost += $product->price;
+}
 
 // Load Composer's autoloader
 require 'phpmailer/PHPMailer.php';
@@ -31,9 +39,9 @@ try {
     $mail->addAddress('feng-shui-kemerovo@mail.ru');     // Add a recipient
 
     // Content
-    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->isHTML(false);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта';
-    $mail->Body    = "Имя заказчика: {$userName}, его телефон: {$userPhone}, комментарий: {$userComment}, заказ {$_COOKIE}";
+    $mail->Body    = "Имя заказчика: {$userName}, его телефон: {$userPhone}, комментарий: {$userComment}, заказ: \n{$productsStr}\nИтого: {$totalCost}";
 
     $mail->send();
     // header('Location: sanks.html');
