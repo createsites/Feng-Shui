@@ -158,6 +158,19 @@ $(document).ready(function(){
         return false;
     };
 
+    // ищет по переданному дочернему элементу dom и возвращает объект продукта из basket.products
+    // @param childOfProdInDom - дочерний dom элемент продукта в оформлении заказа
+    basket.searchProductInOrder = function (childOfProdInDom) {
+        var parent = $(childOfProdInDom).parents('.modal__product');
+        var prod = {};
+        // ищем у продукта, количество которого меняем, название
+        prod.name = parent.find('.modal__product__name').text().trim();
+        // и размер
+        prod.sizeKind = parent.find('.modal__product__size_kind').text().trim();
+
+        return prod;
+    };
+
     // возвращает количество конкретного продукта в корзине
     // prod может быть не полноценным объектом, а содержать лишь имя и размер, необходимые для поиска
     basket.getProductQuantity = function (prod) {
@@ -180,6 +193,19 @@ $(document).ready(function(){
         basket.products[index].price += price * quantity;
         // меняем количество
         basket.products[index].quantity += quantity;
+        // обновляем куки
+        basket.refreshCookie();
+        // обновляем сумму в краткой корзине и оформлении заказа
+        basket.refreshPrice();
+        // количество товара в оформлении заказа
+        basket.refreshOrder();
+    };
+
+    // удаляет продукт
+    // @param index индекс товара в массиве basket.products
+    basket.removeProduct = function (index) {
+        // удаляем из массива
+        basket.products.splice(index, 1);
         // обновляем куки
         basket.refreshCookie();
         // обновляем сумму в краткой корзине и оформлении заказа
@@ -244,12 +270,8 @@ $(document).ready(function(){
 
     // нажатие + в детальной корзине
     $(document).on('click', '.add__plus', function () {
-        var parent = $(this).parents('.modal__product');
-        var prod = {};
-        // ищем у продукта, количество которого меняем, название
-        prod.name = parent.find('.modal__product__name').text().trim();
-        // и размер
-        prod.sizeKind = parent.find('.modal__product__size_kind').text().trim();
+        // ищем продукт в dom в оформлении заказа
+        var prod = basket.searchProductInOrder(this);
         // ищем индекс продукта в массиве товаров
         var index = basket.searchProduct(prod);
         // увеличиваем количество
@@ -257,14 +279,9 @@ $(document).ready(function(){
     });
 
     // нажатие - в детальной корзине
-    // продублировал код, стоит отрефакторить
     $(document).on('click', '.add__minus', function () {
-        var parent = $(this).parents('.modal__product');
-        var prod = {};
-        // ищем у продукта, количество которого меняем, название
-        prod.name = parent.find('.modal__product__name').text().trim();
-        // и размер
-        prod.sizeKind = parent.find('.modal__product__size_kind').text().trim();
+        // ищем продукт в dom в оформлении заказа
+        var prod = basket.searchProductInOrder(this);
         // ищем индекс продукта в массиве товаров
         var index = basket.searchProduct(prod);
         // не уменьшаем количество если ролл один
@@ -272,6 +289,16 @@ $(document).ready(function(){
             // уменьшаем количество
             basket.changeQuantity(index, -1);
         }
+    });
+
+    // удаление продукта в детальной корзине
+    $(document).on('click', '.product__close', function () {
+        // ищем продукт в dom в оформлении заказа
+        var prod = basket.searchProductInOrder(this);
+        // ищем индекс продукта в массиве товаров
+        var index = basket.searchProduct(prod);
+        // удаляем продукт
+        basket.removeProduct(index);
     });
 
     // массив с объектами продуктов (при первой загрузке страницы берется из cookies)
