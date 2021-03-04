@@ -29,7 +29,6 @@ h1
     align-items: center
     padding: 2rem 0 2rem 0
     background-color: $beige 
-    
   &__menu
     background-color: $red
     width: 100%
@@ -38,7 +37,10 @@ h1
     text-transform: uppercase
     font-size: 1.5rem
     color: $white
-
+.menu__wrapper
+  display: flex
+  justify-content: center
+    
 .info
   margin-top: 0.8rem
   margin-right: -4rem
@@ -102,7 +104,10 @@ h1
 .post
   padding: 0 5rem 
   font-size: 2rem 
-    
+  color: $white
+a.post 
+  &:hover
+    color: $yellow    
 .fixd
   position: fixed
   top: 0

@@ -405,6 +405,10 @@ h1 {
   font-size: 1.5rem;
   color: #ffffff; }
 
+.menu__wrapper {
+  display: flex;
+  justify-content: center; }
+
 .info {
   margin-top: 0.8rem;
   margin-right: -4rem;
@@ -466,7 +470,11 @@ h1 {
 
 .post {
   padding: 0 5rem;
-  font-size: 2rem; }
+  font-size: 2rem;
+  color: #ffffff; }
+
+a.post:hover {
+  color: #FFE968FF; }
 
 .fixd {
   position: fixed;
@@ -908,6 +916,9 @@ button {
     margin-left: 0.5rem; } }
 
 @media screen and (max-width: 610px) {
+  .post {
+    font-size: 1.5rem;
+    padding: 0 2rem; }
   .wrap {
     justify-content: flex-start; }
   .container__rolls {
@@ -976,3 +987,7 @@ button {
     width: 95%; }
   .input--light {
     font-size: 1.5rem; } }
+
+@media screen and (max-width: 360px) {
+  .menu__wrapper {
+    flex-direction: column; } }
