@@ -334,5 +334,22 @@ $(document).ready(function(){
 
   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 
+  $(window).scroll(function () {
+    // Если отступ сверху больше 170px то показываем кнопку "Наверх"
+    if ($(this).scrollTop() > 200) {
+        $('#button-up').fadeIn();
+    } else {
+        $('#button-up').fadeOut();
+    }
+});
+
+/** При нажатии на кнопку мы перемещаемся к началу страницы */
+$('#button-up').click(function () {
+    $('body,html').animate({
+        scrollTop: 0
+    }, 500);
+    return false;
+});
+
   
 });
