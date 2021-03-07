@@ -757,7 +757,8 @@ button {
     border: none;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #020501; }
+    color: #020501;
+    background-color: #ffffff; }
     .modal__button:hover {
       background-color: #E14120FF;
       color: #ffffff;
