@@ -558,6 +558,9 @@ button {
   .button__up:hover {
     cursor: pointer; }
 
+.social__post {
+  padding-bottom: 2rem; }
+
 .rolls {
   padding-bottom: 3rem;
   position: relative; }

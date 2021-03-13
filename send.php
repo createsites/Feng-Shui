@@ -44,7 +44,7 @@ try {
     $mail->Body    = "Имя заказчика: {$userName}, его телефон: {$userPhone}, комментарий: {$userComment}, заказ: \n{$productsStr}\nИтого: {$totalCost}";
 
     $mail->send();
-    // header('Location: sanks.html');
+    header('Location: sanks.html');
 } catch (Exception $e) {
     echo "Заказ не отправлен, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
 }
