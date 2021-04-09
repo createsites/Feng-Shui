@@ -32,13 +32,14 @@ const htmlmin = require('gulp-htmlmin');
 };
 
  function buildCSS(done) {
-   src('css/**/**.css').pipe(cleanCSS({compatibility: 'ie8'}))
+   src('css/**/**.css')
+   .pipe(cleanCSS({compatibility: 'ie8'}))
    .pipe(dest('dist/css/'));
    done();
  }
 
  function buildJS(done) {
-    src(['js/**.js', '!js/**.min.js']).pipe(cleanCSS({compatibility: 'ie8'}))
+    src(['js/**.js', '!js/**.min.js'])   
       .pipe(minify({ext:{
         min:'.js'
         }
