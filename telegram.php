@@ -3,13 +3,13 @@
 /* https://api.telegram.org/bot1733858509:AAHDVMSoc4v_P5doXO3YmcxAm7QVlDLvkNo/getUpdates,
 где, XXXXXXXXXXXXXXXXXXXXXXX - токен вашего бота, полученный ранее */
 
-$name = $_POST['userName'];
-$phone = $_POST['userPhone'];
-$userComment = $_POST['userComment'];
+$name = htmlspecialchars($_POST['userName']);
+$phone = htmlspecialchars($_POST['userPhone']);
+$userComment = htmlspecialchars($_POST['userComment']);
 $token = "1733858509:AAHDVMSoc4v_P5doXO3YmcxAm7QVlDLvkNo";
 $chat_id = "-555650130";
 
-$basket = json_decode($_COOKIE['basket']);
+$basket = json_decode(htmlspecialchars($_POST['basket_products']));
 $productsStr = '';
 $totalCost = 0;
 foreach ($basket as $product) {

@@ -219,7 +219,7 @@ $(document).ready(function(){
         // делаем из объекта строку json, чтобы хранить ее в cookies
         var newCookie = JSON.stringify(basket.products);
         // обновляем
-        $.cookie(cookieName, newCookie, {path: '/'});
+        localStorage.setItem(cookieName, newCookie);
     };
 
     // добавление в корзину
@@ -302,11 +302,16 @@ $(document).ready(function(){
     });
 
     // массив с объектами продуктов (при первой загрузке страницы берется из cookies)
-    basket.products = ($.cookie(cookieName) != null) ? JSON.parse($.cookie(cookieName)) : [];
+    basket.products = (localStorage.getItem(cookieName) != null) ? JSON.parse(localStorage.getItem(cookieName)) : [];
     // пересчитываем и показываем цену в корзине
     basket.refreshPrice();
     // обновляем продукты в оформлении заказа
     basket.refreshOrder();
+
+    // перед отправкой формы добавляем в нее данные из корзины
+    $('form').submit(function() {
+        $('#basket_input').val(JSON.stringify(basket.products));
+    });
   
   // Валидация формы
   $('form').validate({
